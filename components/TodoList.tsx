@@ -110,7 +110,7 @@ const TodoList: React.FC<IProps> = ({ todos }) => {
                   </p>
                 </div>
                 <div className="todo-right-side">
-                  {todo.checked && (
+                  {!todo.checked && (
                     <>
                       <TrashCanIcon
                         className="todo-trash-can"
@@ -230,7 +230,7 @@ const Container = styled.div`
       }
       .todo-right-side {
         display: flex;
-        margin-right: 20px;
+        margin-right: 12px;
         svg {
           &:first-child {
             margin-right: 20px;
@@ -245,15 +245,6 @@ const Container = styled.div`
         .todo-check-mark {
           fill: ${palette.deep_green};
         }
-        .todo-button {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          border: 1px solid ${palette.gray};
-          background-color: transparent;
-          outline: none;
-        }
-
         .todo-button {
           width: 20px;
           height: 20px;
